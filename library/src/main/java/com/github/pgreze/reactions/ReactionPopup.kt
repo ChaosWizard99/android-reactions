@@ -31,7 +31,7 @@ class ReactionPopup @JvmOverloads constructor(
             it.layoutParams = FrameLayout.LayoutParams(
                     ViewGroup.LayoutParams.WRAP_CONTENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT,
-                    Gravity.CENTER)
+                    Gravity.RIGHT)
 
             it.reactionSelectedListener = reactionSelectedListener
 
