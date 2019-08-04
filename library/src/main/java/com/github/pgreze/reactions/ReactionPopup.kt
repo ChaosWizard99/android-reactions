@@ -22,8 +22,8 @@ class ReactionPopup @JvmOverloads constructor(
 
     private val rootView = FrameLayout(context).also {
         it.layoutParams = ViewGroup.LayoutParams(
-                ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.MATCH_PARENT)
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT)
     }
     private val view: ReactionViewGroup by lazy(LazyThreadSafetyMode.NONE) {
         // Lazily inflate content during first display
@@ -41,8 +41,8 @@ class ReactionPopup @JvmOverloads constructor(
 
     init {
         contentView = rootView
-        width = ViewGroup.LayoutParams.MATCH_PARENT
-        height = ViewGroup.LayoutParams.MATCH_PARENT
+        width = ViewGroup.LayoutParams.WRAP_CONTENT
+        height = ViewGroup.LayoutParams.WRAP_CONTENT
         isFocusable = true
         setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
     }
