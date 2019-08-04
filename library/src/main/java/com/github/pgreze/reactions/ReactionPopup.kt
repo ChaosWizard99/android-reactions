@@ -51,7 +51,7 @@ class ReactionPopup @JvmOverloads constructor(
     override fun onTouch(v: View, event: MotionEvent): Boolean {
         if (!isShowing) {
             // Show fullscreen with button as context provider
-            showAtLocation(v, Gravity.NO_GRAVITY, 0, 0)
+            showAtLocation(v,Gravity.RIGHT, 0, 0)
             view.show(event, v)
         }
         return view.onTouchEvent(event)
