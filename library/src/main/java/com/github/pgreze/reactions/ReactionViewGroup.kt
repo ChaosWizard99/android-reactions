@@ -60,8 +60,6 @@ class ReactionViewGroup(context: Context, private val config: ReactionsConfig) :
     gravity = Gravity.RIGHT
 }
     
-    gravity = Gravity.TOP
-}
                 addView(it)
             }
     private val reactions: List<ReactionView> = config.reactions
