@@ -62,6 +62,7 @@ class ReactionViewGroup(context: Context, private val config: ReactionsConfig) :
             .map {
                 ReactionView(context, it).also {
                     it.layoutParams = LayoutParams(mediumIconSize, mediumIconSize)
+                    it
                     addView(it)
                 }
             }
