@@ -124,7 +124,7 @@ class ReactionViewGroup(context: Context, private val config: ReactionsConfig) :
         dialogX = firstClick.x - horizontalPadding - mediumIconSize / 2
         if (dialogX + dialogWidth >= width) {
             // Center dialog
-            dialogX = Math.max(0, (width - dialogWidth) / 2)
+            //dialogX = Math.max(0, (width - dialogWidth) / 2)
         }
         // Y position will be slightly on top of parent view
         dialogY = parentLocation.y - dialogHeight * 2
