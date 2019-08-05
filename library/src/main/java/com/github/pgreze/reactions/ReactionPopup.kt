@@ -22,8 +22,8 @@ class ReactionPopup @JvmOverloads constructor(
 
     private val rootView = FrameLayout(context).also {
         it.layoutParams = ViewGroup.LayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT)
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.MATCH_PARENT)
     }
     private val view: ReactionViewGroup by lazy(LazyThreadSafetyMode.NONE) {
         // Lazily inflate content during first display
@@ -31,7 +31,7 @@ class ReactionPopup @JvmOverloads constructor(
             it.layoutParams = FrameLayout.LayoutParams(
                     ViewGroup.LayoutParams.WRAP_CONTENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT,
-                    Gravity.RIGHT)
+                    Gravity.CENTER)
 
             it.reactionSelectedListener = reactionSelectedListener
 
@@ -41,8 +41,8 @@ class ReactionPopup @JvmOverloads constructor(
 
     init {
         contentView = rootView
-        width = ViewGroup.LayoutParams.WRAP_CONTENT
-        height = ViewGroup.LayoutParams.WRAP_CONTENT
+        width = ViewGroup.LayoutParams.MATCH_PARENT
+        height = ViewGroup.LayoutParams.MATCH_PARENT
         isFocusable = true
         setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
     }
@@ -51,7 +51,7 @@ class ReactionPopup @JvmOverloads constructor(
     override fun onTouch(v: View, event: MotionEvent): Boolean {
         if (!isShowing) {
             // Show fullscreen with button as context provider
-            showAtLocation(v,Gravity.RIGHT, 0, 0)
+            showAtLocation(v, Gravity.NO_GRAVITY, 0, 0)
             view.show(event, v)
         }
         return view.onTouchEvent(event)
