@@ -55,7 +55,7 @@ class ReactionViewGroup(context: Context, private val config: ReactionsConfig) :
 
     private val background = RoundedView(context, config)
             .also {
-                it.layoutParams = LayoutParams(dialogWidth, dialogHeight).gravity = Gravity.RIGHT|Gravity.CENTER_VERTICAL;
+                it.layoutParams = LayoutParams(dialogWidth, dialogHeight).gravity = Gravity.RIGHT|Gravity.CENTER_VERTICAL
                 addView(it)
             }
     private val reactions: List<ReactionView> = config.reactions
