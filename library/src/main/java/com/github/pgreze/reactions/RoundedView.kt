@@ -36,7 +36,7 @@ class RoundedView(context: Context, private val config: ReactionsConfig) : View(
         } else {
             (paddingLeft + paddingRight) / 2f
         }
-        val bPad = xPad / 2
+        val bPad = xPad // 2
         val nIcons = config.reactions.size
         val regIconSize = (w - (2 * xPad + (nIcons - 1) * bPad)) / nIcons
         cornerSize = xPad + regIconSize / 2
